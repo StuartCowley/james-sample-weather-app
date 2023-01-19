@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 
-function App({ forecast, location }) {
+function App({ forecasts, location }) {
   return (
     <div className="App">
       <LocationDetails city={location.city} country={location.country} />
@@ -17,9 +17,9 @@ App.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
       date: PropTypes.number,
-      desc: PropTypes.string,
+      description: PropTypes.string,
       icon: PropTypes.string,
-      temp: PropTypes.shape({
+      temperature: PropTypes.shape({
         max: PropTypes.number,
         min: PropTypes.number,
       }),
