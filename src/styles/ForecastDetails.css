@@ -1,0 +1,42 @@
+.forecastDetails {
+margin-top: 10px;
+font-size: 130%;
+appearance: none;
+background-color: azure;
+border-radius: 40em;
+border-style: none;
+box-shadow: #ADCFFF 0 -12px 6px inset;
+box-sizing: border-box;
+color: #000000;
+display: inline-block;
+font-family: -apple-system,sans-serif;
+font-size: 1.2rem;
+font-weight: 700;
+margin-top: 2em;
+outline: none;
+padding: 1em;
+quotes: auto;
+text-align: center;
+transition: all .15s;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: 50%;
+}
+
+.forecast-details__windSpeed {
+    display: inline-block;
+}
+
+.forecast-details__windDirection {
+    font-variant: small-caps;
+    font-size: 100%;
+    display: inline-block;
+    padding-left: 2px;
+}
+
+.forecast-details__icon {
+    font-size: 5em;
+    float: left;
+    padding: 3px;
+}

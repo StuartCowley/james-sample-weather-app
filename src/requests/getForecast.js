@@ -16,6 +16,7 @@ const getForecast = (
   axios
     .get(endpoint)
     .then((response) => {
+      setErrorMessage("");
       setSelectedDate(response.data.forecasts[0].date);
       setForecasts(response.data.forecasts);
       setLocation(response.data.location);
@@ -23,9 +24,9 @@ const getForecast = (
     .catch((error) => {
       const { status } = error.response;
       if (status === 404) {
-        setErrorMessage("No such town or city, try again!");
+        setErrorMessage("No details for this place, try again!");
         // eslint-disable-next-line
-        console.error("Location is not valis", error);
+        console.error("Location is not valid", error);
       }
       if (status === 500) {
         setErrorMessage("Oops, server error, try again later.");
